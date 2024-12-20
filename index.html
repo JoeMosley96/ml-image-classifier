@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TensorFlow.js Number Identifier</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UZ-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Import the webpage's stylesheet-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="heading">
+      <div class="titleText">
+        <h1>TensorFlow.js Number Identifier</h1>
+        <p>See console for even more outputs</p>
+      </div>
+      <section class="buttonbox">
+        <button class="button" id="runButton" type="button">Run</button>
+        <button class="button" id="resetButton" type="button">Reset</button>
+      </section>
+    </div>
+
+    <section class="box">
+      <h2>Input Image</h2>
+      <p id="inputText">Training model. Please wait...</p>
+
+      <canvas
+        id="canvas"
+        width="28"
+        height="28"
+        style="border: solid black"
+      ></canvas>
+    </section>
+
+    
+
+    <section class="box">
+      <h2>Prediction</h2>
+      <p>
+        Below you see what number the trained TensorFlow.js model has predicted
+        from the input image.
+      </p>
+      <p id="prediction"></p>
+    </section>
+
+    <section  class="graphBox">
+      <h2>Training and Validation Loss Per Epoch</h2>
+      <div id="chart" class="graph">
+      </div>
+    </section>
+
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+
+    <!-- Import TensorFlow.js library -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js"
+      type="text/javascript"
+    ></script>
+    <!-- Import the page's JavaScript to do some stuff -->
+    <script type="module" src="./script.js" defer></script>
+  </body>
+</html>
